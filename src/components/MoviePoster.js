@@ -5,7 +5,8 @@ const MoviePoster = ({ tmdbId, title, fallback }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const TMDB_API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your actual API key
+  // Use environment variable
+  const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY;
   const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
   const TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
@@ -23,20 +24,25 @@ const MoviePoster = ({ tmdbId, title, fallback }) => {
           setError(true);
         }
       } catch (err) {
+        console.error('Error fetching poster:', err);
         setError(true);
       } finally {
         setLoading(false);
       }
     };
 
-    if (tmdbId && TMDB_API_KEY !== 'YOUR_API_KEY_HERE') {
+    if (tmdbId && TMDB_API_KEY) {
       fetchPoster();
     } else {
       setLoading(false);
       setError(true);
+      if (!TMDB_API_KEY) {
+        console.warn('TMDB API key not found in environment variables');
+      }
     }
-  }, [tmdbId]);
+  }, [tmdbId, TMDB_API_KEY]);
 
+  // Rest of component remains the same...
   if (loading) {
     return (
       <div className="film-poster loading">
