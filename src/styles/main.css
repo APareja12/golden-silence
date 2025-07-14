@@ -293,6 +293,356 @@ main {
   transform: scale(1.05);
 }
 
+/* History Section */
+.history-section {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.history-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* Tabs */
+.history-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.history-tabs button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.history-tabs button::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.history-tabs button:hover::after,
+.history-tabs button.tab-active::after {
+  width: 100%;
+}
+
+.history-tabs button:hover,
+.history-tabs button.tab-active {
+  color: #d4af37;
+}
+
+/* Timeline */
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #d4af37, transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-marker {
+  flex: 0 0 200px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #d4af37, #f4d03f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.timeline-year {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.1rem;
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.timeline-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 10px;
+  margin: 0 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.timeline-content h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  color: #d4af37;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Timeline Categories */
+.timeline-item.technology .timeline-icon {
+  background: linear-gradient(45deg, #4a90e2, #7bb3f7);
+}
+
+.timeline-item.artistic .timeline-icon {
+  background: linear-gradient(45deg, #e24a90, #f77bb3);
+}
+
+.timeline-item.milestone .timeline-icon {
+  background: linear-gradient(45deg, #d4af37, #f4d03f);
+}
+
+/* Innovations Grid */
+.innovations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.innovation-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.innovation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+}
+
+.innovation-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.innovation-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.innovation-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.innovators {
+  text-align: left;
+}
+
+.innovators strong {
+  color: #d4af37;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.innovators ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.innovators li {
+  color: #e0e0e0;
+  padding: 3px 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.innovators li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+}
+
+/* Key Figures Grid */
+.figures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.figure-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.figure-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  border-color: #d4af37;
+}
+
+.figure-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.figure-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.figure-role {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.figure-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.notable-works {
+  text-align: left;
+}
+
+.notable-works strong {
+  color: #d4af37;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.notable-works ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.notable-works li {
+  color: #e0e0e0;
+  padding: 3px 0;
+  position: relative;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+.notable-works li::before {
+  content: '🎬';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+}
+
+/* Responsive Design for History */
+@media (max-width: 768px) {
+  .history-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-container::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 60px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    flex: none;
+  }
+
+  .timeline-content {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .innovations-grid,
+  .figures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Actors Section */
 .actors-section {
   background: rgba(255, 255, 255, 0.02);
