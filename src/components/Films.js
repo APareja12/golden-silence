@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { filmsData } from '../data/films';
+import MoviePoster from './MoviePoster';
 
 const Films = () => {
   useEffect(() => {
@@ -33,7 +34,11 @@ const Films = () => {
             className="film-card"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <div className="film-poster">{film.poster}</div>
+            <MoviePoster
+              tmdbId={film.tmdbId}
+              title={film.title}
+              fallback={film.poster}
+            />
             <h3 className="film-title">{film.title}</h3>
             <div className="film-info">
               <span>{film.year}</span>
