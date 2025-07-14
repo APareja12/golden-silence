@@ -6,6 +6,7 @@ import Films from './components/Films';
 import Actors from './components/Actors';
 import History from './components/History';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Films />
         <Actors />
         <History />
+        <About />
       </main>
       <Footer />
     </div>
