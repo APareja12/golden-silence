@@ -7,7 +7,7 @@ export const filmsData = [
     duration: '67 min',
     description:
       'A masterpiece of German Expressionist cinema, this psychological horror film tells the story of a hypnotist who uses a somnambulist to commit murders.',
-    tmdbId: '3175', // TMDB movie ID
+    tmdbId: '234', // TMDB movie ID
     poster: '🎭', // Fallback emoji
   },
   {
@@ -18,7 +18,7 @@ export const filmsData = [
     duration: '148 min',
     description:
       "Fritz Lang's visionary epic about a futuristic city divided between the working class and the elite, featuring groundbreaking visual effects.",
-    tmdbId: '2207',
+    tmdbId: '19',
     poster: '🌟',
   },
   {
@@ -29,7 +29,7 @@ export const filmsData = [
     duration: '95 min',
     description:
       "Charlie Chaplin's beloved comedy about a lone prospector in the Klondike during the 1898 gold rush, filled with iconic scenes and physical comedy.",
-    tmdbId: '2620',
+    tmdbId: '962',
     poster: '🎪',
   },
   {
@@ -40,7 +40,7 @@ export const filmsData = [
     duration: '195 min',
     description:
       "D.W. Griffith's controversial epic that revolutionized filmmaking techniques while depicting the Civil War and Reconstruction era.",
-    tmdbId: '4552',
+    tmdbId: '618',
     poster: '🏛️',
   },
   {
@@ -51,7 +51,7 @@ export const filmsData = [
     duration: '94 min',
     description:
       "F.W. Murnau's haunting vampire film that introduced Count Orlok to cinema, featuring expressionistic cinematography and memorable imagery.",
-    tmdbId: '11003',
+    tmdbId: '653',
     poster: '🌙',
   },
   {
@@ -62,7 +62,7 @@ export const filmsData = [
     duration: '95 min',
     description:
       "F.W. Murnau's poetic masterpiece about love, temptation, and redemption, considered one of the greatest films ever made.",
-    tmdbId: '12593',
+    tmdbId: '631',
     poster: '🎬',
   },
 ];
