@@ -120,12 +120,9 @@ npm test # Run test suite
 
 ### **Section 8: Developer Info**
 
-Finally, add this:
-
-```markdown
 ## 👨‍💻 Developer
 
-**Your Name**
+**Alexis Pareja**
 
 - 💼 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/alexis-pareja-b964b36b/)
 - 🐙 **GitHub**: [github.com/yourusername](https://github.com/APareja12)
