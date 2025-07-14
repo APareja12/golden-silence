@@ -1,9 +1,18 @@
 import React from 'react';
+import heroBackground from '../images/hero-background.png';
 
 const Hero = () => {
   const scrollToFilms = () => {
     document.getElementById('films').scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Set CSS custom property for the background
+  React.useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--hero-background',
+      `url(${heroBackground})`
+    );
+  }, []);
 
   return (
     <section className="hero" id="home">
