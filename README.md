@@ -129,7 +129,7 @@ Finally, add this:
 
 - 💼 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/alexis-pareja-b964b36b/)
 - 🐙 **GitHub**: [github.com/yourusername](https://github.com/APareja12)
-- 📧 **Email**: your.email@example.com
+- 📧 **Email**: alexis.pareja@hotmail.com
 
 ### **Technical Skills Demonstrated**
 
