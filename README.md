@@ -124,8 +124,8 @@ npm test # Run test suite
 
 **Alexis Pareja**
 
-- 💼 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/alexis-pareja-b964b36b/)
-- 🐙 **GitHub**: [github.com/yourusername](https://github.com/APareja12)
+- 💼 **LinkedIn**: [https://linkedin.com/in/alexis-pareja-b964b36b/]
+- 🐙 **GitHub**: [https://github.com/APareja12]
 - 📧 **Email**: alexis.pareja@hotmail.com
 
 ### **Technical Skills Demonstrated**
