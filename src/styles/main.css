@@ -174,7 +174,117 @@ main {
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
-/* Responsive adjustments */
+/* Mobile First Responsive Design */
+/* Small phones */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 10px;
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+  }
+
+  nav ul.mobile-open {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  }
+
+  main {
+    margin-top: 70px;
+  }
+
+  .hero {
+    height: 60vh;
+    background-attachment: scroll;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
+  }
+
+  .hero-content p {
+    font-size: 1rem !important;
+    padding: 0 10px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium phones and small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-content {
+    padding: 0 15px;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 15px;
+    backdrop-filter: blur(15px);
+    z-index: 999;
+  }
+
+  nav ul.mobile-open {
+    display: flex;
+  }
+
+  .hero {
+    height: 65vh;
+    background-attachment: scroll;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem !important;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Responsive adjustments for larger screens */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 3rem !important;
@@ -220,6 +330,47 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 50px;
+}
+
+/* Small screen grid optimizations */
+@media (max-width: 480px) {
+  .films-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .films-section {
+    padding: 50px 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .actors-section {
+    padding: 50px 10px;
+  }
+
+  .actors-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .actor-card {
+    padding: 20px 15px;
+  }
+
+  .actor-photo {
+    width: 100px;
+    height: 100px;
+    font-size: 1.8rem;
+  }
+
+  .actor-name {
+    font-size: 1.2rem;
+  }
 }
 
 .film-card {
@@ -739,8 +890,68 @@ main {
   font-style: normal;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Enhanced About Section Responsiveness */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 30px 15px;
+  }
+
+  .about-decorative-frame {
+    display: none;
+  }
+
+  .text-block {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+
+  .text-title {
+    font-size: 1.3rem;
+  }
+
+  .text-block p {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 30px 15px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  .quote-content {
+    padding: 30px 15px;
+  }
+
+  .quote-content blockquote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .quote-content::before {
+    font-size: 6rem;
+    top: -15px;
+    left: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .about-hero {
     padding: 40px 20px;
   }
@@ -750,7 +961,7 @@ main {
   }
 
   .text-block {
-    padding: 20px;
+    padding: 25px 20px;
   }
 
   .stats-grid {
@@ -758,15 +969,15 @@ main {
   }
 
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .quote-content {
-    padding: 40px 20px;
+    padding: 40px 25px;
   }
 
   .quote-content blockquote {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -1022,11 +1233,65 @@ main {
   font-size: 0.8rem;
 }
 
-/* Responsive Design for History */
-@media (max-width: 768px) {
+/* Enhanced History Section Responsiveness */
+@media (max-width: 480px) {
   .history-tabs {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    margin-bottom: 30px;
+  }
+
+  .history-tabs button {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    left: 0;
+    flex: none;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .timeline-content {
+    margin: 0;
+    margin-top: 15px;
+    padding: 20px;
+  }
+
+  .innovations-grid,
+  .figures-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .innovation-card,
+  .figure-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .history-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
 
   .timeline-container::before {
@@ -1050,7 +1315,10 @@ main {
     margin-top: 20px;
   }
 
-  .innovations-grid,
+  .innovations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .figures-grid {
     grid-template-columns: 1fr;
   }
@@ -1138,45 +1406,72 @@ footer {
   text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Tablet and larger screens */
+@media (min-width: 769px) and (max-width: 1024px) {
   .header-content {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    padding: 20px;
+  .films-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
-  nav ul.mobile-open {
-    display: flex;
-  }
-
-  .mobile-menu {
-    display: flex;
+  .actors-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem !important;
   }
 
   .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.15rem !important;
+  }
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+  }
+}
+
+/* Enhanced mobile responsiveness for existing breakpoint */
+@media (max-width: 768px) {
+  .films-section {
+    padding: 60px 15px;
   }
 
   .films-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .film-card {
+    padding: 20px;
   }
 
   .actors-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .history-section {
+    padding: 60px 15px;
+  }
+
+  .about-section {
+    padding: 60px 15px;
   }
 }
 
